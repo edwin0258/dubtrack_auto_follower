@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  
+  "name": "Dubtrack Extension Three",
+  "description": "For learning purposes..",
+  "version": "1.0",
+  
+  "browser_action": {
+    "default_title": "Basic Dubtrack Extension"
+  },
+  "content_scripts": [{
+    "matches":[
+      "http://dubtrack.fm/*",
+      "https://dubtrack.fm/*",
+      "http://*.dubtrack.fm/*",
+      "https://*.dubtrack.fm/*"
+    ],
+    "js": ["jquery.js","loader.js"],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "activeTab",
+    "http://dubtrack.fm/*",
+    "https://dubtrack.fm/*",
+    "http://*.dubtrack.fm/*",
+    "https://*.dubtrack.fm/*"
+  ],
+  "web_accessible_resources": [
+        "dubtrack_extension.js"
+    ]
+  
+}
