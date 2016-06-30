@@ -20,7 +20,7 @@ var roomFunctions = {
       console.log(followed);
     })
     // get how many users you have followed
-    $.get('https://api.dubtrack.fm/user/560f062aeef3200300a9e466/follows').then(function(result){
+    $.get('https://api.dubtrack.fm/user/' + your_id_here.toString() + '/follows').then(function(result){
 	    console.log(result.data.length)
     });
     /*$.post('https://api.dubtrack.fm/chat/'+ room_id, {
